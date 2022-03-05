@@ -16,9 +16,9 @@ Client-Server for arithmetic calculations. The communication is through signals 
 ## Client
 The client -
 1. create the file for communication with the server - ```to_srv.txt```.  
-    If the files exists the client will try ten times to create a new one, and between each try it will wait one to five seconds (randomly).
-    If after the ten tries the client still have not succeed, it will close it self with appropriate message.
-2. add the relevnt arguments from the terminal to the file.  
+    If the file exists, the client will try ten times to create a new one, and between each try, it will wait for one to five seconds (randomly).
+    After ten tries, if the client has not succeeded, it will close with an appropriate message.
+2. add the relevant arguments from the terminal to the file.  
     The arguments are -
     - ```arg[0]``` - the program name.
     - ```arg[1]``` - the server pid.
@@ -29,9 +29,9 @@ The client -
       - 3 is *
       - 4 is /
     -  ```arg[4]``` - the second number.
-    The client add ```arg[2], arg[3], arg[4]``` to file, and also its pid.
+    The client adds ```arg[2], arg[3], arg[4]``` to file, and also its pid.
 3. send a signal to the server and modify it that the file is ready.
-4. wait for signal from the server.
+4. wait for a signal from the server.
 5. after getting the signal from the server, the client will read the data from the file had made for the client - ```to_client_xxxx.txt``` (xxxx = client pid), will write it to the screen and delete the file.
     
 
@@ -65,4 +65,3 @@ There are a few steps -
       - 3 is *
       - 4 is /
     - p4 - the second number
-    
